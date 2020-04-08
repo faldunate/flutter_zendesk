@@ -44,7 +44,7 @@ public class FlutterZendeskPlugin implements MethodCallHandler {
             Zendesk.INSTANCE.setIdentity(identity);
             Support.INSTANCE.init(Zendesk.INSTANCE);
             HelpCenterActivity.builder()
-                    //.withArticlesForSectionIds(list)
+                    .withArticlesForSectionIds(360008439232)
                     .show(mRegistrar.activity());
             result.success("Zendesk Initialized");
         } else {
