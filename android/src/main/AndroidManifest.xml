@@ -10,6 +10,10 @@
         <activity
             android:name="zendesk.support.requestlist.RequestListActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        
+        <activity
+            android:name="com.zendesk.sdk.requests.ViewRequestActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>        
 
         <activity
             android:name="zendesk.support.guide.HelpCenterActivity"
