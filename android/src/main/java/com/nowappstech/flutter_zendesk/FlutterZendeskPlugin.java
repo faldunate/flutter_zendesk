@@ -18,6 +18,8 @@ import zendesk.support.Support;
 import zendesk.support.guide.HelpCenterActivity;
 import zendesk.support.request.RequestActivity;
 
+import zendesk.support.UiConfig;
+
 public class FlutterZendeskPlugin implements MethodCallHandler {
 
     private static Registrar mRegistrar;
@@ -40,12 +42,17 @@ public class FlutterZendeskPlugin implements MethodCallHandler {
             List<Long> list = new ArrayList<>();
             list.add(0, 1234L);
             list.add(0, 360008439232L);
+            
+            UiConfig hcConfig = HelpCenterActivity.builder()
+                .withContactUsButtonVisible(true)
+                .config();            
+            
             Identity identity = new AnonymousIdentity();
             Zendesk.INSTANCE.setIdentity(identity);
             Support.INSTANCE.init(Zendesk.INSTANCE);
             HelpCenterActivity.builder()
                     .withArticlesForSectionIds(list)
-                    .show(mRegistrar.activity());
+                    .show(mRegistrar.activity(), hcConfig);
             result.success("Zendesk Initialized");
         } else {
             result.notImplemented();
