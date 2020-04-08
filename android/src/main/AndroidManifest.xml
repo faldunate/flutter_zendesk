@@ -12,6 +12,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         
         <activity
+            android:name="zendesk.support.guide.ViewArticleActivity"
+            android:theme="@style/AppTheme.NoActionBar" />        
+        
+        <activity
             android:name="com.zendesk.sdk.requests.ViewRequestActivity"
             android:theme="@style/AppTheme.NoActionBar"/>        
 
