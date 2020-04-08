@@ -39,12 +39,12 @@ public class FlutterZendeskPlugin implements MethodCallHandler {
                     clientId);
             List<Long> list = new ArrayList<>();
             list.add(0, 1234L);
-            list.add(0, 5678L);
+            list.add(0, 360008439232);
             Identity identity = new AnonymousIdentity();
             Zendesk.INSTANCE.setIdentity(identity);
             Support.INSTANCE.init(Zendesk.INSTANCE);
             HelpCenterActivity.builder()
-                    .withArticlesForSectionIds(360008439232)
+                    .withArticlesForSectionIds(list)
                     .show(mRegistrar.activity());
             result.success("Zendesk Initialized");
         } else {
